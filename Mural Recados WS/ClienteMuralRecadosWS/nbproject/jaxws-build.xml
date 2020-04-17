@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?><!--
+        *** GENERATED FROM jax-ws.xml - DO NOT EDIT !                             ***
+        *** TO MODIFY wsimport options USE Web Service node -> Edit WS Attributes ***
+        *** TO CHANGE TARGETS GENERATED TO jaxws-build.xml COPY THOSE             ***
+        *** TARGETS TO ../build.xml AND MODIFY THAT FILE INSTEAD                  ***
+
+        --><project xmlns:xalan="http://xml.apache.org/xslt" xmlns:j2seproject3="http://www.netbeans.org/ns/j2se-project/3" xmlns:jaxws="http://www.netbeans.org/ns/jax-ws/1">
+    <!--
+                ===================
+                JAX-WS WSIMPORT SECTION
+                ===================
+            -->
+    <target name="wsimport-init" depends="init">
+        <mkdir dir="${build.generated.sources.dir}/jax-ws"/>
+        <taskdef name="wsimport" classname="com.sun.tools.ws.ant.WsImport">
+            <classpath path="${libs.jaxws21.classpath}"/>
+        </taskdef>
+    </target>
+    <target name="wsimport-client-MuralWS" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/MuralWS"/>
+        <property name="wsdl-MuralWS" location="xml-resources/web-service-references/MuralWS/wsdl/localhost_8080/MuralWS/MuralWS.wsdl"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/MuralWS" destdir="${build.generated.dir}/jax-wsCache/MuralWS" wsdl="${wsdl-MuralWS}" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:8080/MuralWS/MuralWS?wsdl" xnocompile="true" xendorsed="true">
+            <depends file="${wsdl-MuralWS}"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/MuralWS"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/MuralWS">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-MuralWS" depends="-init-project">
+        <delete dir="${build.generated.dir}/jax-wsCache/MuralWS"/>
+        <delete dir="${build.generated.sources.dir}/jax-ws/mural/service"/>
+    </target>
+    <target name="wsimport-client-UsuarioWS" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/UsuarioWS"/>
+        <property name="wsdl-UsuarioWS" location="xml-resources/web-service-references/UsuarioWS/wsdl/localhost_8080/MuralRecadosWS/UsuarioWS.wsdl"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/UsuarioWS" destdir="${build.generated.dir}/jax-wsCache/UsuarioWS" wsdl="${wsdl-UsuarioWS}" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:8080/MuralRecadosWS/UsuarioWS?wsdl" xnocompile="true" xendorsed="true">
+            <depends file="${wsdl-UsuarioWS}"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/UsuarioWS"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/UsuarioWS">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-UsuarioWS" depends="-init-project">
+        <delete dir="${build.generated.dir}/jax-wsCache/UsuarioWS"/>
+        <delete dir="${build.generated.sources.dir}/jax-ws/mural/service"/>
+    </target>
+    <target name="wsimport-client-RecadoWS" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/RecadoWS"/>
+        <property name="wsdl-RecadoWS" location="xml-resources/web-service-references/RecadoWS/wsdl/localhost_8080/MuralRecadosWS/RecadoWS.wsdl"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/RecadoWS" destdir="${build.generated.dir}/jax-wsCache/RecadoWS" wsdl="${wsdl-RecadoWS}" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:8080/MuralRecadosWS/RecadoWS?wsdl" xnocompile="true" xendorsed="true">
+            <depends file="${wsdl-RecadoWS}"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/RecadoWS"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/RecadoWS">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-RecadoWS" depends="-init-project">
+        <delete dir="${build.generated.dir}/jax-wsCache/RecadoWS"/>
+        <delete dir="${build.generated.sources.dir}/jax-ws/mural/service"/>
+    </target>
+    <target name="wsimport-client-generate" depends="wsimport-client-MuralWS, wsimport-client-UsuarioWS, wsimport-client-RecadoWS"/>
+</project>

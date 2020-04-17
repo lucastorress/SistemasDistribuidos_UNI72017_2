@@ -1,0 +1,102 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI (http://jax-ws.java.net). RI's version is Metro/2.3.2-b608 (trunk-7979; 2015-01-21T12:50:19+0000) JAXWS-RI/2.2.11-b150120.1832 JAXWS-API/2.2.12 JAXB-RI/2.2.12-b141219.1637 JAXB-API/2.2.13-b141020.1521 svn-revision#unknown. --><xs:schema xmlns:tns="http://service.mural/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://service.mural/">
+
+<xs:element name="getApelidoRecado" type="tns:getApelidoRecado"/>
+
+<xs:element name="getApelidoRecadoResponse" type="tns:getApelidoRecadoResponse"/>
+
+<xs:element name="getCodigo" type="tns:getCodigo"/>
+
+<xs:element name="getCodigoResponse" type="tns:getCodigoResponse"/>
+
+<xs:element name="getTexto" type="tns:getTexto"/>
+
+<xs:element name="getTextoResponse" type="tns:getTextoResponse"/>
+
+<xs:element name="hello" type="tns:hello"/>
+
+<xs:element name="helloResponse" type="tns:helloResponse"/>
+
+<xs:element name="setApelidoRecado" type="tns:setApelidoRecado"/>
+
+<xs:element name="setApelidoRecadoResponse" type="tns:setApelidoRecadoResponse"/>
+
+<xs:element name="setCodigo" type="tns:setCodigo"/>
+
+<xs:element name="setCodigoResponse" type="tns:setCodigoResponse"/>
+
+<xs:element name="setTexto" type="tns:setTexto"/>
+
+<xs:element name="setTextoResponse" type="tns:setTextoResponse"/>
+
+<xs:complexType name="hello">
+<xs:sequence>
+<xs:element name="name" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="helloResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="setApelidoRecado">
+<xs:sequence>
+<xs:element name="apelidoRecado" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="setApelidoRecadoResponse">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="setTexto">
+<xs:sequence>
+<xs:element name="texto" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="setTextoResponse">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getApelidoRecado">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getApelidoRecadoResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getCodigo">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getCodigoResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="setCodigo">
+<xs:sequence>
+<xs:element name="codigo" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="setCodigoResponse">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getTexto">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getTextoResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>
